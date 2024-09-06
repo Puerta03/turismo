@@ -14,59 +14,113 @@
             padding: 0;
         }
 
-        nav {
-            background-color: #000;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: right;
-        }
+        header {
+    background-color: #000000; /* Cor de fundo do header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        nav .txt {
-            color: white;
-            padding-right: 20px;
-            font-weight: 450;
-            font-style: normal;
-            font-size: 15px;
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        .header {
-            background: rgb(225, 1, 1);
-            background: linear-gradient(180deg, rgba(225, 1, 1, 1) 31%, rgba(143, 0, 0, 1) 88%);
-            color: white;
-            padding: 10px 20px;
-            position: relative;
-            text-align: center;
-        }
+nav ul li {
+    margin-left: 20px;
+}
 
-        .header img {
-            height: 150px;
-            display: block;
-            margin: 0 auto;
-        }
+#LinhaVermelha{
+     background: rgb(225,1,1);
+background: linear-gradient(to bottom, rgba(225,1,1,1) 0%, rgba(143,0,0,1) 100%);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .navbar {
-            background-color: #E10101;
-            overflow: hidden;
-            padding: 5px 0;
-            text-align: center;
-        }
+.logo {
+    margin: auto;
+  display: block;
+}
+.logo img{
+  height: 140px;
+}
 
-        .navbar a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 10px 40px;
-            text-decoration: none;
-            font-weight: 450;
-            font-style: normal;
-            font-size: 15px;
-        }
+/* DOPDOWN */
 
-        .navbar a:hover {
-            background-color: #c30000;
-        }
+ul .dropdown{
+    list-style: none;
+    background: #E10101;
+}
 
+ul .dropdown li {
+    padding: 5px;
+}
+
+ul .dropdown li a {
+    display: block;
+    padding: 5px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Estilo para o menu principal no header */
+.main-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo para o menu de navegação principal */
+.main-navigation {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: #E10101;
+}
+
+.main-navigation li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 15px 15px;
+}
+
+.main-navigation li a {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.main-navigation li:hover .dropdown {
+    display: block;
+}
+
+.main-navigation .dropdown a:hover {
+    text-decoration: underline
+}
         .content {
             padding: 20px;
             max-width: 1250px;
@@ -197,25 +251,71 @@
 </head>
 
 <body>
-    <nav>
-        <p class="txt">Peta Situs</p>
-        <p class="txt">Legalisasi</p>
-        <p class="txt">IN | EN</p>
-    </nav>
+    <header>
+        <div class="item">
+            <!-- <h1>Nome do Site</h1> -->
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#home">Peta Situs</a></li>
+                <li><a href="#about">Legalisasi</a></li>
+                <li><a href="#services">IN | EN</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="header">
-        <img src="kisspng-embassy-of-indonesia-garuda-international-organiza-dewan-wilayah-jawa-timur-assosiasi-iumkm-indones-5b64932a6bd056.7465344215333179304416-removebg-preview.png"
-            alt="Logo">
+    <!-- Linha Vermelha Section -->
+    <div id="LinhaVermelha">
+        <div class="logo">
+            <img src="kisspng-embassy-of-indonesia-garuda-international-organiza-dewan-wilayah-jawa-timur-assosiasi-iumkm-indones-5b64932a6bd056.7465344215333179304416-removebg-preview.png" alt="">
+        </div>
     </div>
 
-    <div class="navbar">
-        <a href="#">All About Indonesia</a>
-        <a href="#">Consular Information</a>
-        <a href="#">Visa Information</a>
-        <a href="#">Trade and Travel</a>
-        <a href="#">Trade Fairs and Exhibitions</a>
-        <a href="#">Newspapers and Media</a>
-    </div>
+    <!-- Main Navigation Menu -->
+    <ul class="main-navigation">
+        <li>
+            <a href="#">All about Indonesia</a>
+            <ul class="dropdown">
+                <li><a href="#">Strategic Position</a></li><br>
+                <li><a href="#">Migrations and Influence</a></li><br>
+                <li><a href="#">Indian Influence and Rise of Empires</a></li><br>
+                <li><a href="#">Temples and Architecture</a></li><br>
+                <li><a href="#">Mongol Invasion and Spread of Islam</a></li><br>
+            </ul>
+        <li>
+            <a href="#">Consular Information</a>
+            <ul class="dropdown">
+                <li><a href="#">Press releases</a></li><br>
+            </ul>
+        </li>
+        <li><a href="#">Visa Information</a></li>
+        <li><a href="#">Tourism and Travel</a>
+            <ul class="dropdown">
+                <li><a href="#">Tourism</a></li><br>
+                <li><a href="#">Bali</a></li><br>
+                <li><a href="#">Jakarta</a></li><br>
+                <li><a href="#">Java</a></li><br>
+                <li><a href="#">Kalimantan</a></li><br>
+                <li><a href="#">Papua</a></li><br>
+                <li><a href="#">Sulawesi</a></li><br>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Trade fairs and Exhibition</a>
+            <ul class="dropdown">
+                <li><a href="#">The 26th Trade Expo Indonesia</a></li><br>
+                <li><a href="#">Upcoming Trade Shows in Indonesia</a></li><br>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Newspapers and Links</a>
+            <ul class="dropdown">
+                <li><a href="#">News agency</a></li><br>
+                <li><a href="#">Official Links</a></li><br>
+                <li><a href="#">Useful Links</a></li><br>
+            </ul>
+        </li>
+    </ul>
 
     <div class="content">
         <div class="sectionn">
@@ -233,7 +333,7 @@
         </div>
 
         <div class="section">
-            <img src="bali.jpg" alt="Bali">
+            <img src="Bali.webp" alt="Bali">
             <div>
                 <h2 class="ttl2">Bali</h2>
                 <p class="txt2">Bali is a tropical island in Indonesia, known as a paradise on Earth, with sunny
